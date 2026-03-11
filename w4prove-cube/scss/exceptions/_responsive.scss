@@ -1,0 +1,35 @@
+@media (min-width: 700px) {
+  body > div {
+    max-width: 900px;
+  }
+
+  nav ul {
+    @include flex(row, right, center, $spacing-l);
+    padding: $spacing-m 0;
+  }
+
+  article {
+    flex-direction: row;
+    text-align: left;
+    gap: $spacing-l;
+    border-bottom: none;
+    border-top: 1px solid $base-border-color;
+  }
+
+  .post-content {
+    align-items: flex-start;
+    border-left: 1px solid $base-border-color;
+    padding-left: $spacing-l;
+  }
+
+  .post-date {
+    width: 140px;
+    text-align: right;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  figure img {
+    max-width: 200px;
+  }
+}

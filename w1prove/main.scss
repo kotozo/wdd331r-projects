@@ -1,0 +1,195 @@
+/* Style for the mobile*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Using colors variables */
+
+$base-border-color: #ddd;
+$color-text: #333;
+$color-text-light: #666;
+$color-accent: #DEB887;
+$color-accent-hover: #00ddff;
+$color-heading:#999;
+
+// Using typography variables
+$font-body: Arial, Helvetica, sans-serif;
+$font-heading: 'Lora', serif;
+
+// using spacing variables
+$spacing-s: 10px;
+$spacing-m: 20px;   
+$spacing-l: 30px;
+
+// Layout variables
+$layout-max-width: 600px;
+
+// mixins section
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+
+body {
+    font-family: $font-body;
+    color: $color-text;
+    background-color: #fff;
+}
+
+body > div {
+    max-width: $layout-max-width;
+    margin: 0 auto;
+    padding: $spacing-m;
+}
+
+ // Nesting rule apply to header and h1 a
+
+header {
+    text-align: center;
+    padding-bottom: $spacing-l;
+    border-bottom: solid 1px #d0d0d0;
+
+    h1 {
+        a {
+            text-decoration: none;
+            font-size: 3rem;
+            color: $color-text;
+            font-family: "Lora", serif;
+        }
+    }
+}
+
+// applying nested rules to nav ul and nav a
+
+
+nav {
+  ul {
+    @include flex(column, center, center, 15px);
+    border-top: solid 1px $base-border-color;
+    margin-top: $spacing-l;
+    list-style: none;
+    color: $color-text-light;
+    padding: $spacing-m 0; // top and bottom padding
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-accent;
+    font-size: 1.1rem;
+
+    &:hover {
+      color: $color-accent-hover;
+    }
+  }
+}
+
+
+// applying nested rules to article, .post-date and .post-content
+
+article {
+    @include flex(column, center, center);
+    text-align: center;
+    padding: $spacing-l 0;
+    border-bottom: 1px solid $base-border-color;
+    }
+
+
+    
+    .post-date {
+        font-size: 1rem;
+        color: #000;
+        margin-bottom: $spacing-m;
+        text-transform: uppercase;
+    }
+
+    .post-content {
+        @include flex(column, center, center); }
+
+        h2  {
+
+            a {
+                text-decoration: none;
+                color: $color-heading;
+                font: {
+                    size: 1.6rem;
+                    weight: 600;
+                }
+            }  
+        }
+        p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: $color-accent;
+        }
+        
+        figure {
+            margin: $spacing-m 0;
+
+        }
+        figure img {
+            max-width: 250px;
+            width: 100%;
+        }
+
+
+/* Media Queries for desktop Devices */
+
+@media screen and (min-width: 700px) {
+  body > div {
+    max-width: 900px;
+  }
+
+  nav ul {
+    @include flex(row, right, center, $spacing-l);
+    border-top: 1px solid $base-border-color;
+    padding: $spacing-m 0; // top and bottom padding
+  }
+
+  article {
+    flex-direction: row;
+    text-align: left;
+    gap: $spacing-l;
+    border-bottom: none;
+    border-top: 1px solid $base-border-color;
+
+    .post-content {
+      align-items: flex-start;
+      border-left: 1px solid $base-border-color;
+      padding-left: $spacing-l;
+    }
+  }
+
+  .post-date {
+    width: 140px;
+    text-align: right;
+    margin-bottom: 0;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .post-date::after {
+    content: "\A2016";
+    white-space: pre;
+  }
+
+  figure img {
+    max-width: 200px;
+  }
+}
+

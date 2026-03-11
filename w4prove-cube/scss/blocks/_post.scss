@@ -1,0 +1,21 @@
+article {
+  @include flex(column, center, center);
+  text-align: center;
+  padding: $spacing-l 0;
+  border-bottom: 1px solid $base-border-color;
+}
+
+.post-date {
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: $spacing-m;
+  text-transform: uppercase;
+}
+
+.post-content {
+  @include flex(column, center, center);
+}
+
+figure {
+  margin: $spacing-m 0;
+}

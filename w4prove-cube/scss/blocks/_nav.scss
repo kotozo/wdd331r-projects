@@ -1,0 +1,18 @@
+nav ul {
+  @include flex(column, center, center, 15px);
+  border-top: 1px solid $base-border-color;
+  margin-top: $spacing-l;
+  list-style: none;
+  color: $color-text-light;
+  padding: $spacing-m 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: $color-accent;
+  font-size: 1.1rem;
+
+  &:hover {
+    color: $color-accent-hover;
+  }
+}
