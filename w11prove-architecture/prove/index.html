@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="cart" aria-labelledby="cart-title">
+      <header class="cart__header">
+        <h2 class="cart__title" id="cart-title">Your cart</h2>
+        <span class="cart__count" aria-label="3 items in cart">3</span>
+      </header>
+
+      <div class="cart__panel">
+        <ul class="cart__list" role="list">
+        <!-- Item 1 -->
+          <li class="cart__item">
+            <div class="cart__row">
+              <div class="cart__text">
+                <h3 class="cart__name">Product name</h3>
+                <p class="cart__desc">Brief description</p>
+              </div>
+              <div class="cart__price" aria-label="Price">$12</div>
+              </div>
+         </li>
+
+      <!-- Item 2 -->
+         <li class="cart__item">
+           <div class="cart__row">
+             <div class="cart__text">
+               <h3 class="cart__name">Second product</h3>
+               <p class="cart__desc">Brief description</p>
+             </div>
+             <div class="cart__price" aria-label="Price">$8</div>
+           </div>
+         </li>
+
+      <!-- Item 3 -->
+        <li class="cart__item">
+            <div class="cart__row">
+            <div class="cart__text">
+                <h3 class="cart__name">Third item</h3>
+                <p class="cart__desc">Brief description</p>
+            </div>
+            <div class="cart__price" aria-label="Price">$5</div>
+            </div>
+        </li>
+
+      <!-- Promo row -->
+        <li class="cart__item cart__item--promo">
+            <div class="cart__row">
+            <div class="cart__text">
+                <h3 class="cart__name cart__name--promo">Promo code</h3>
+                <p class="cart__code">EXAMPLECODE</p>
+            </div>
+            <div class="cart__price cart__price--promo" aria-label="Promo discount">-$5</div>
+            </div>
+        </li>
+
+      <!-- Total row -->
+        <li class="cart__item cart__item--total">
+            <div class="cart__row">
+            <div class="cart__text">
+                <p class="cart__total-label">Total (USD)</p>
+            </div>
+            <div class="cart__total" aria-label="Total">$20</div>
+            </div>
+        </li>
+        </ul>
+
+    <!-- Promo form -->
+    <form class="cart__form" action="#" method="post">
+      <label class="cart__form-label" for="promo">Promo code</label>
+      <div class="cart__promo-form">
+        <input
+          class="cart__input"
+          id="promo"
+          name="promo"
+          type="text"
+          placeholder="Promo code"
+          autocomplete="off"
+        />
+        <button class="cart__button" type="submit">Redeem</button>
+      </div>
+    </form>
+  </div>
+</section>
+</body>
+</html>
