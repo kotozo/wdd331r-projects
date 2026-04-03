@@ -1,0 +1,195 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container {
+    height: 25vmin;
+    width: 25vmin;
+    background-color: teal;
+}
+html,
+body {
+    height: 100%;
+}
+
+.container-one {
+    padding: 1vmin;
+}
+
+.orbiting-circle {
+    height: 25%;
+    width: 25%;
+    background-color: darkred;
+    border-radius: 50%;
+    animation: orbit 3s linear infinite;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@keyframes orbit {
+    0% { transform: translate(0,0); }
+    25% { transform: translate(300%,0%); }
+    50% { transform: translate(300%,300%); }
+    75% { transform: translate(0%,300%); }
+    100% { transform: translate(0%,0%); }
+}
+
+@keyframes orbit {
+    0% { transform: translate(0,0); }
+    5% { transform: translate(0,0); } /* don't change for 5% of the time...pause */
+    25% { transform: translate(300%,0%); } /* start moving again */
+    30% { transform: translate(300%,0%); } /* pause */
+    50% { transform: translate(300%,300%); } /* move */
+    55% { transform: translate(300%,300%); }
+    75% { transform: translate(0%,300%); }
+    80% { transform: translate(0%,300%); }
+    100% { transform: translate(0%,0%); }
+}
+
+
+.container-two {
+    padding: 1vmin;
+    position : relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* Stop the orbiting of the circle inside the second container */
+.container-two .orbiting-circle {
+   animation: transform-spin 3s ease-in-out infinite;/* Change the animation to a simple spin */
+   background-color: darkred; /* Keep the same color */
+    
+}
+
+@keyframes transform-spin {
+    0% { 
+        border-radius: 50%; /* Start as a circle */
+        background-color: darkred; /* Start with the same color */
+        transform: rotate(0deg); /* Start with no rotation */
+    }
+    30% {
+        border-radius: 0%; /* Change to a square */
+        background-color: white; /* Change color to white */
+        transform: rotate(90deg);   /* Start with no rotation */
+    }
+    100% {
+        border-radius: 50%; /* End as a circle */
+        background-color: darkred; /* End with the same color */
+        transform: rotate(360deg); /*Rotate fully */
+        
+    }
+}
+
+.container-three {
+    padding: 1vmin;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-three .orbiting-circle {
+   animation: none; /* Stop the animation */
+   position:relative;
+   background: transparent; /* Make the background transparent */
+   
+}
+
+
+/*create the two semi-circles*/
+.container-three .orbiting-circle::before,
+.container-three .orbiting-circle::after {
+    content:"";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    background-color:darkred;
+}
+.container-three .orbiting-circle::before {
+    left: 0;
+    border-radius: 50% 0 0 50% / 50%;
+  
+    animation: split-left 3s ease-in-out infinite;
+}
+
+.container-three .orbiting-circle::after {
+    right: 0;
+    border-radius: 0 50% 50% 0 / 50%;
+    
+    animation: split-right 3s ease-in-out infinite;
+}
+
+@keyframes split-left {
+    0% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-120%);
+    }
+    60% {
+        transform: translate(-120%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes split-right {
+    0% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(120%);
+    }
+
+    60% {
+        transform: translateX(120%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.container-four {
+    padding: 1vmin;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-four .orbiting-circle {
+    animation: blink 1.2s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
