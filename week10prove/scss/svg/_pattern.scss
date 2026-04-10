@@ -1,0 +1,11 @@
+@use "../abstract/variables";
+/* This file contains styles for the card pattern elements. (texture) */
+.pattern-line {
+  stroke: variables.$card-pattern;
+  stroke-width: 2;
+}
+
+.card-pattern {
+  fill-opacity: 1;
+}
+  

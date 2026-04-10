@@ -1,0 +1,199 @@
+* { 
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  height: 25vmin;
+  width: 25vmin;
+  background-color: teal;
+}
+/*--------------- container one animation -------------------*/
+.container-one {
+  padding: 1vim;  
+}
+.orbiting-circle {
+  height:25%;
+  width: 25%;
+  background-color: darkred;
+  border-radius: 50%;
+  animation: orbit 3s linear infinite;
+}
+@keyframes orbit {
+  0%{ transform: translate(0,0); }
+  5% { transform: translate(0,0); }
+  25%{ transform: translate(300%, 0%); }
+  30%{ transform: translate(300%, 0%); }
+  50%{ transform: translate(300%, 300%); }
+  55%{ transform: translate(300%, 300%); }
+  75%{ transform: translate(0%, 300% ); }
+  80%{ transform: translate(0%, 300% ); }
+  100%{ transform: translate(0%, 0%); }
+}
+/*--------------- container two animation -----------------*/
+.container-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.morphing-circle {
+  height: 25%;
+  width: 25%;
+  background-color: red;
+  animation: morphing-circle-square 3s linear infinite;
+}
+.morphing-circle {
+  height: 25%;
+  width: 25%;
+  background-color: darkred;
+  border-radius: 50%;
+  transition: border-radius .5s ease, 
+              background-color .5s ease,
+              transform .5s ease .5s;
+}
+
+.container-two: hover .morphing-circle {
+  border-radius: 0;
+  background-color: white;
+  transform: rotate(90deg);
+}
+@keyframes morphing-circle-square {
+  0% { border-radius: 50% }
+  25% { 
+    border-radius:50%;
+    background-color: darkred;
+     
+  }
+  50% {
+    border-radius: 0%;
+    background-color: white;
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(90deg);
+    background-color: white;
+    transform: rotate(90deg);
+  }
+  100% {
+    border-radius: 50%;
+    background-color: darkred;
+    transform: rotate(90deg);
+  }
+}
+/*--------------- container three animation ---------------*/
+
+.container-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.semi-circle-left{
+  width: 12.5%;
+  height: 25%;
+  border-radius: 150px 0 0 150px;
+  background-color: darkred;
+  /*margin-left: 1px;*/
+  animation: moveLeft 3s ease-in infinite forwards;
+}
+@keyframes moveLeft {
+  0%, 
+  25% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  65%, 
+  85% {
+    transform: translateX(-8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.semi-circle-right{
+  width: 12.5%;
+  height: 25%;
+  border-radius: 0 150px 150px 0;
+  background-color: darkred;
+  /*margin-left: 1px;*/
+  animation: moveRight 3s ease-in infinite forwards;
+}
+
+@keyframes moveRight {
+
+    0%,
+    25% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    65%,
+    85% {
+        transform: translateX(8px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/*--------------- container animation -------------------*/
+
+.blinking-circle {
+  height: 25%;
+  width: 25%;
+  background-color: darkred;
+  border-radius: 50%;
+ 
+}
+
+  .blinking-circle {
+    height: 25%;
+    width: 25%;
+    background-color: darkred;
+    border-radius: 50%;
+    animation: blinking-circle 1s linear infinite;
+   
+  }
+  
+  .container-four {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  @keyframes blinking-circle{
+
+    0% { border-radius: 50%;
+        background-color: darkred; 
+    }
+    50% { 
+        background-color: teal; 
+    }
+    75% { 
+        background-color: teal; 
+    }
+    
+    100% { border-radius: 50%;
+        background-color: darkred; 
+    }
+    
+  }
+  

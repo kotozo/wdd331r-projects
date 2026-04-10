@@ -1,0 +1,7 @@
+
+.rectangle {
+    fill: darkred;
+    stroke: black;
+    stroke-width:5;
+    opacity:0.5;
+}

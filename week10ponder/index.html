@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First SVG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My First SVG</h1>
+    <svg width="150" height="150"> 
+        <!-- define symbol-->
+         <defs>
+            <symbol id="mySymbol" viewBox="0 0 150 150">
+
+                <rect x="0" y="0" rx="10" ry="10" width="150" height="150" class="rectangle" />
+                <circle cx="90" cy="90" r="30" stroke="darkred" stroke-width="2" fill="white" />
+
+            </symbol>
+        </defs>
+
+        <!-- use the symbol-->
+         <use xlink:href="#mySymbol"></use>
+          
+
+    </svg>
+
+    <svg width="200" height="200">
+        <use xlink:href="#mySymbol"></use>
+    </svg>
+
+    <svg width="300" height="300">
+        <use xlink:href="#mySymbol"></use>
+    </svg>
+
+
+</body>
+</html>

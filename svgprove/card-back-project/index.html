@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Card back Project</title>
+    <link rel="stylesheet" href="css/card-back.css">
+</head>
+<body>
+
+    <div class="card">
+        <svg class="card__svg" viewBox="0 0 240 336" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- DEFINITIONS (not rendered)-->
+             <defs>
+                <!-- Diamond symbol definition-->
+                <symbol id="diamond" viewBox="0 0 20 20">
+                    <polygon points="10,0 20,10 10,20 10,20 0,10"/>
+
+                </symbol>
+
+                <!-- Diamond pattern -->
+                <pattern id="diamond-pattern" patternUnits="UserSpaceOnUse" width="24" height="24">
+                    <use href="#diamond" x="2" y="2"/>
+                </pattern>
+
+                <!--Center symbol-->
+                <symbol id="center-mark" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45"/>
+                    <use href="#diamond" x="40" y="40" width="20" height="20"/>
+                </symbol>
+            </defs>
+
+            <!-- Card background -->
+            <rect class="card-bg" width="240" height="336" rx="12"/>
+
+            <!--card patter area-->
+            <rect class="card-pattern" x="12" y="12" width="216" height="312" rx="8" fill="url(#diamond-pattern)"/>
+
+            <!-- Center emblem -->
+             <g transform="translate(70 118) scale(1)">
+                <use href="#center-mark"/>
+            </g>
+
+        </svg>
+
+
+
+    </div>
+    
+</body>
+</html>

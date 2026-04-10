@@ -1,0 +1,15 @@
+@use "../abstract/variables";
+
+.card-emblem {
+  .emblem {
+    circle {
+      fill: none;
+      stroke: variables.$card-accent;
+      stroke-width: 3;
+    }
+
+    path {
+      fill: variables.$card-accent;
+    }
+  }
+}

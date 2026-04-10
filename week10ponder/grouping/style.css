@@ -1,0 +1,11 @@
+svg{background-color:white;}
+        #wing{fill:#81CCAA;}
+        #body{fill:#B8E4C2;}
+        #pupil{fill:#1F2600;}
+        #beak{fill:#F69C0D;}
+        .eye-ball{fill:#F6FDC4;}
+
+#bird {
+    stroke: black;
+    stroke-width: 1;
+}

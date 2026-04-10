@@ -1,0 +1,15 @@
+.svgcontainer {
+    width: 200px;
+    height: 200px;
+    border: solid 1px;
+}
+
+.rectangle {
+    fill: darkred;
+    stroke: black;
+    stroke-width:5;
+    opacity:0.5;
+}
+
+/* using grouping to apply styles to multiple elements */
+

@@ -1,0 +1,11 @@
+@use "../abstract/variables";
+
+#center-mark circle {
+  fill: none;
+  stroke: variables.$card-fg;
+  stroke-width: 3;
+}
+
+#center-mark polygon {
+  fill: variables.$card-fg;
+}

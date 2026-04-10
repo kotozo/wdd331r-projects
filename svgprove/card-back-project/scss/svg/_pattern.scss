@@ -1,0 +1,10 @@
+@use "../abstract/variables";
+
+#diamond {
+    fill: variables.$card-pattern;
+}
+.card-pattern {
+   stroke: variables.$card-fg;
+   stroke-width: 1;
+
+}

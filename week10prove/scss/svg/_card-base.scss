@@ -1,0 +1,12 @@
+@use "../abstract/variables";
+
+.card-back__svg {
+  width: 240px;
+  height: auto;
+  display: block;
+}
+
+.card-base {
+  fill: variables.$card-bg;
+  
+}

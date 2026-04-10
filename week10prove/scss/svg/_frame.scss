@@ -1,0 +1,9 @@
+@use "../abstract/variables";
+
+.card-frame {
+  .ornament-shape {
+    fill: none;
+    stroke: variables.$card-accent;
+    stroke-width: 2;
+  }
+}

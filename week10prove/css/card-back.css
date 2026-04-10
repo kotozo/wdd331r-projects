@@ -1,0 +1,39 @@
+.card-back__svg {
+  width: 240px;
+  height: auto;
+  display: block;
+}
+
+.card-base {
+  fill: #1a1a2e;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* This file contains styles for the card pattern elements. (texture) */
+.pattern-line {
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 2;
+}
+
+.card-pattern {
+  fill-opacity: 1;
+}
+
+.card-frame .ornament-shape {
+  fill: none;
+  stroke: #c9a24d;
+  stroke-width: 2;
+}
+
+.card-emblem .emblem circle {
+  fill: none;
+  stroke: #c9a24d;
+  stroke-width: 3;
+}
+.card-emblem .emblem path {
+  fill: #c9a24d;
+}
+
+/*# sourceMappingURL=card-back.css.map */

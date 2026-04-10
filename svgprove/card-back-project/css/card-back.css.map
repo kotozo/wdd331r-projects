@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/svg/_base.scss","../scss/abstract/_variables.scss","../scss/svg/_pattern.scss","../scss/svg/_emblem.scss"],"names":[],"mappings":"AAEA;EACE;EACA;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE,MCdQ;;;ACEV;EACI,MDDW;;;ACGf;EACG,QDLO;ECMP;;;ACLH;EACE;EACA,QFHQ;EEIR;;;AAGF;EACE,MFRQ","file":"card-back.css"}

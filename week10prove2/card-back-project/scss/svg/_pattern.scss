@@ -1,0 +1,6 @@
+@use "../abstract/variables";
+
+.texture-line {
+  stroke: variables.$card-texture;
+  stroke-width: 2;
+}

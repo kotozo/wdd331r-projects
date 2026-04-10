@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SVG Card Back</title>
+  <link rel="stylesheet" href="css/card-back.css" />
+</head>
+<body>
+
+<div class="card">
+  <svg
+    class="card__svg"
+    viewBox="0 0 240 336"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+
+    <defs>
+
+      <!-- diagonal line pattern -->
+
+      <pattern
+        id="texture-pattern"
+        patternUnits="userSpaceOnUse"
+        width="12"
+        height="12"
+        >
+
+        <!-- Diagonal 1 (bottom-left → top-right) -->
+        <path d="M0 12 L12 0" class="texture-line" />
+
+        <!-- Diagonal 2 (top-left → bottom-right) -->
+        <path d="M0 0 L12 12" class="texture-line" />
+      </pattern>
+
+      <!-- diamond symbol -->
+      <symbol id="diamond" viewBox="0 0 20 20">
+        <polygon points="10,0 20,10 10,20 0,10" />
+      </symbol>
+
+      <!-- center emblem -->
+      <symbol id="center-emblem" viewBox="0 0 100 100">
+        <use href="#diamond" x="40" y="40" width="20" height="20" />
+      </symbol>
+
+    </defs>
+
+    <!-- card background -->
+    <rect
+      class="card-bg"
+      width="240"
+      height="336"
+      rx="14"
+    />
+
+    <!-- textured fill -->
+    <rect
+      class="card-texture"
+      x="14"
+      y="14"
+      width="212"
+      height="308"
+      rx="10"
+      fill="url(#texture-pattern)"
+    />
+
+    <!-- center symbol -->
+    <g transform="translate(100 158) scale(1.5)">
+      <use href="#center-emblem" />
+    </g>
+
+  </svg>
+</div>
+
+</body>
+</html>

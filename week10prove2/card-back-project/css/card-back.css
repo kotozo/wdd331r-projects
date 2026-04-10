@@ -1,0 +1,25 @@
+.card {
+  width: 240px;
+  margin: 2rem auto;
+}
+
+.card__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-bg {
+  fill: hsl(0, 98%, 51%);
+}
+
+.texture-line {
+  stroke: rgb(255, 255, 255);
+  stroke-width: 2;
+}
+
+#center-emblem polygon {
+  fill: #ffffff;
+}
+
+/*# sourceMappingURL=card-back.css.map */

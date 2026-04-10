@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using symbol to design SVG images</title>
+</head>
+<body>
+    <symbol id="icon-plane" viewBox="0 0 1024 1024">
+        <title>Plane</title>¨
+        <path class="path1" d="M496.672 125.12c26.496 0 48 21.504 48 48v248l320 200v86.016l-320-108v168l65.248 64.928-0.032 66.688-113.216-37.632-111.584 37.76 0.48-70.048 61.12-59.68 0.544-169.984-319.904 109.952 0.672-88 320.224-202.016 0.512-246.016c-0.064-26.464 21.44-47.968 47.936-47.968z"></path>
+    </symbol>
+
+    <svg class="icon icon-plane">
+        <use xlink:href="#icon-plane"></use>
+    </svg>
+    
+</body>
+</html>

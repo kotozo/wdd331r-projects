@@ -1,0 +1,5 @@
+@use "../abstract/variables";
+
+#center-emblem polygon {
+  fill: variables.$card-fg;
+}
